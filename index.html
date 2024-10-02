@@ -9,51 +9,43 @@
 </head>
 <body>
 
-
     <div id="main_content">
         <header>
-
             <h1>Hello There</h1>
             <h2>Welcome to my website</h2>
-
         </header>
 
         <section id="introduction">
-
             <p>Hello, this is my website being hosted by GitHub Pages.</p>
             <p>This website will display my web projects and other things as well.</p>
-
         </section>
     
         <section id="about_user">
-
             <form>
-
                 <label for="user_email">What's your email?</label>
                 <input type="email" name="user_email" id="user_email">
                 <br>
                 <label for="user_name">What's your name?</label>
                 <input type="text" name="user_name" id="user_name">
-
             </form>
-
         </section>
 
+        <!-- Visitor Counter Section -->
+        <section id="visitor_counter">
+            <div>Website visit count:</div>
+            <div class="counter" id="counter"></div>
+        </section>
     </div>
 
-
     <footer id="footer">
-
         <p>Copyright © Navaneeth Krishna 2024</p>
-
         <div id="redirects">
             <button type="button" onclick="window.location.href='https://www.youtube.com/@MenaceToSociety1245'">YouTube</button>
             <button type="button" onclick="window.location.href='https://github.com/NavaneethKrishna551'">GitHub</button>
             <button type="button" onclick="window.location.href='aboutme.html'">About me</button>
         </div>
-
         <script src="index.js"></script>
-
+        <script src="counter.js"></script> <!-- Link to the counter JavaScript file -->
     </footer>
 
 </body>
