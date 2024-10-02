@@ -7,36 +7,51 @@
     <link rel="stylesheet" type="text/css" href="index_style.css">
 </head>
 <body>
-    <div id="introduction">
 
-        <h1>Hello There</h1>
-        <h2>Welcome to my website</h2>
 
-        <div id="introduction_para">
+    <div id="main_content">
+        <header>
 
-            <p>Hello this is my website being hosted by github pages</p>
-            <p>This website will display my web projects and other thing as well</p>
+            <h1>Hello There</h1>
+            <h2>Welcome to my website</h2>
 
-        </div>
-   
+        </header>
+
+        <section id="introduction">
+
+            <p>Hello, this is my website being hosted by GitHub Pages.</p>
+            <p>This website will display my web projects and other things as well.</p>
+
+        </section>
+    
+        <section id="about_user">
+
+            <form>
+
+                <label for="user_email">What's your email?</label>
+                <input type="email" name="user_email" id="user_email">
+                <br>
+                <label for="user_name">What's your name?</label>
+                <input type="text" name="user_name" id="user_name">
+
+            </form>
+
+        </section>
+
     </div>
 
-    <div id="footer">
 
-        Copyright&copy; Navaneeth Krishna 2024
+    <footer id="footer">
 
-        <br><br>
+        <p>Copyright © Navaneeth Krishna 2024</p>
 
         <div id="redirects">
-
             <button type="button" onclick="window.location.href='https://www.youtube.com/@MenaceToSociety1245'">YouTube</button>
             <button type="button" onclick="window.location.href='https://github.com/NavaneethKrishna551'">GitHub</button>
-            <button type="button" onclick="window.location.href='#'">About me</button>
-    
+            <button type="button" onclick="window.location.href='aboutme.html'">About me</button>
         </div>
 
-
-    </div>
+    </footer>
 
 </body>
 </html>

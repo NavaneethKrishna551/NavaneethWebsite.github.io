@@ -1,23 +1,41 @@
-body{
-
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(89, 185, 192);
-    
 }
 
-#introduction{
-
+header {
     background-color: rgb(110, 238, 238);
-    text-shadow: 1px;
     text-align: center;
 
 }
 
-#footer{
-    text-align: right;
+#main_content{
+    background-color: rgb(110, 238, 238);
 }
 
-button{
+section#introduction {
+    color: black;
+    text-align: center;
+
+}
+
+section#about_user {
+    margin: 20px;
+    
+}
+
+#footer {
+    text-align: right;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
+    position: fixed;
+    width: 98%;
+    bottom: 0;
+}
+
+button {
     color: rgb(255, 254, 220);
     background-color: rgb(14, 13, 13);
     font-size: 16px;
@@ -27,6 +45,6 @@ button{
     margin: 5px;
 }
 
-button:hover{
+button:hover {
     background-color: rgb(55, 55, 55);
 }
