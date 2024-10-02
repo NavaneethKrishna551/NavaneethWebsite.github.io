@@ -1,4 +1,4 @@
 console.log("hello world");
 
-let user_name: string = "navaneeth";
+let user_name = "navaneeth";
 console.log(user_name)
