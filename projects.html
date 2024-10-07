@@ -7,7 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Nothing Yet</h1>
-    <p>I havent started on this page check in later</p>
+    
+    <div class="container">
+        <div class="intro">
+            <h1>Projects</h1>
+            <p>this is the page where my web projects</p>
+        </div>
+    </div>
+
+    <div id="project_1">
+        <style>
+            #count{
+                font-size: 3cm;
+                font-family: 'Consolas', 'Courier New', monospace;
+            }
+            .count_button{
+                font-size: large;
+            }
+        </style>
+
+        <h3>Counter</h3>
+        <p>this is a simple counter project</p>
+        <label id="count">0</label><br>
+        <button class="count_button" button onclick="AddCount()">+ Count</button>
+        <button class="count_button" onclick="decreaseCount()">- Count</button>
+    </div>
+    <script src="projects/counter.js"></script>
+    <footer id="footer">
+        <section id="copyright">Copyright Navaneeth Krishna 2024© <br></section>
+        <button onclick="location.href='https://github.com/NavaneethKrishna551/'" id="github">GitHub</button>
+        <button onclick="location.href='https://www.youtube.com/@MenaceToSociety1245'" id="youtube">YouTube</button>
+        <button onclick="location.href='about_me.html'" id="aboutme">About Me</button>
+    </footer>
+
+
+
+    
 </body>
 </html>
