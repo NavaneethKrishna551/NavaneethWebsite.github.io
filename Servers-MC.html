@@ -42,28 +42,29 @@
         <button type="submit" id="submit">Submit</button>
       </form>
 
-      <script>
-        const form = document.querySelector("#form");
-        const submitButton = document.querySelector("#submit");
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzSnd2wRctNic1ZdKGa1M5gmlmzzSRH9NWRx9RaU6kJjFGo2z7urrjRspXexzWSXdFnjQ/exec';
+<script>
+  const form = document.querySelector("#form");
+  const submitButton = document.querySelector("#submit");
+  const scriptURL = 'https://script.google.com/macros/s/AKfycb.../exec'; // use your deployed URL
 
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          submitButton.disabled = true;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    submitButton.disabled = true;
 
-          const requestBody = new FormData(form);
-          fetch(scriptURL, { method: 'POST', body: requestBody })
-            .then(response => {
-              alert('Success! Your application has been submitted.');
-              form.reset();
-              submitButton.disabled = false;
-            })
-            .catch(error => {
-              alert('Error! Submission failed: ' + error.message);
-              submitButton.disabled = false;
-            });
-        });
-      </script>
+    const requestBody = new FormData(form);
+    fetch(scriptURL, { method: 'POST', body: requestBody })
+      .then(response => {
+        alert('Success! Your application has been submitted.');
+        form.reset();
+        submitButton.disabled = false;
+      })
+      .catch(error => {
+        alert('Error! Submission failed: ' + error.message);
+        submitButton.disabled = false;
+      });
+  });
+</script>
+
     </section>
   </div>
 
