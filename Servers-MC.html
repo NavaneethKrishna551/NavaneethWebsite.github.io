@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft servers</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft Servers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #intro {
+      text-align: left;
+      font-size: 14px;
+      word-spacing: -1px;
+      letter-spacing: -1px;
+    }
+  </style>
 </head>
 <body>
-    <div id="intro">
-        
-        <h1> About the servers</h1>
-        <p>So back in 2023 me and my friends made a minecraft server. Now we have expanded and merged with another server <br></p>
-        <p>We are currently on the 11-4th season.</p>
-        <br>
-        <h2> How to join?</h2>
-        <p>Firstly, Join the <a href="https://discord.gg/azPj76q48A"> discord server</a></p>
-        <p>then make an application and wait. Thats all!</p>
-        <style>
-            #intro{text-align: left; font-size: 14; word-spacing: -1; letter-spacing: -1; }
-        </style>
-    </div>
 
+  <div id="intro">
+    <h1>About the servers</h1>
+    <p>So back in 2023 me and my friends made a Minecraft server. Now we have expanded and merged with another server.</p>
+    <p>We are currently on the 11-4th season.</p>
     
+    <h2>How to join?</h2>
+    <p>Firstly, join the <a href="https://discord.gg/azPj76q48A">Discord server</a>.</p>
+    <p>Then make an application and wait. That's all!</p>
+  </div>
 
-    <footer id="footer">
-        <p>Copyright © Navaneeth Krishna 2024</p>
-        <button onclick="location.href='./'" id="go_back">Return</button>
-    </footer>
+  <div id="minecraft-application">
+    <section>
+      <h2>Application Form</h2>
+      <form id="form">
+        <label for="mc-username">What's your Minecraft username?</label><br>
+        <input type="text" id="mc-username" name="minecraftUsername" placeholder="Type your Minecraft username..." required><br><br>
+
+        <label for="discord-username">What's your Discord name?</label><br>
+        <input type="text" id="discord-username" name="discordUsername" placeholder="Type your Discord username..." required><br><br>
+
+        <label for="minecraft-aspect">What aspect of Minecraft do you like (building, PVP, etc.)?</label><br>
+        <input type="text" id="minecraft-aspect" name="minecraftAspect" placeholder="Type..." required><br><br>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+
+      <script>
+        const form = document.querySelector("#form");
+        const submitButton = document.querySelector("#submit");
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
+
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          submitButton.disabled = true;
+
+          const requestBody = new FormData(form);
+          fetch(scriptURL, { method: 'POST', body: requestBody })
+            .then(response => {
+              alert('Success! Your application has been submitted.');
+              form.reset();
+              submitButton.disabled = false;
+            })
+            .catch(error => {
+              alert('Error! Submission failed: ' + error.message);
+              submitButton.disabled = false;
+            });
+        });
+      </script>
+    </section>
+  </div>
+
+  <footer id="footer">
+    <p>Copyright © Navaneeth Krishna 2024</p>
+    <button onclick="location.href='./'" id="go_back">Return</button>
+  </footer>
+
 </body>
 </html>
